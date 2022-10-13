@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="asa-frontend">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Åsa Jomsson">
+    <meta name="charset"="utf-8">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/cow.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Åsa Jonsson</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			$(function() {
+            $('nav ul li a').click(function(e) {
+                e.preventDefault();
+                $('nav ul li a').css('background', 'rgb(36, 36, 37)');
+                $('nav ul li a').css('color', 'rgb(228, 225, 225)');
+                $(this).css('color', 'white');
+                $(this).css('background', 'darkgreen');
+                var page = $(this).attr("name");
+                var url = page + '.html';
+                console.log(url);
+                $("#box").load(url);
+            });
+            });
+		</script>
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="#menu">
+                <li><a href="#" name="animation">Animation</a></li>
+                <li><a href="#" name="app">App</a></li>
+                <li><a href="#" name="bootstrap">Bootstrap</a></li>
+                <li><a href="#" name="box">Box</a></li>
+                <li><a href="#" name="cascading">Cascading</a></li>
+                <li><a href="#" name="debugging">Debugging</a></li>
+                <li><a href="#" name="elements">Elements</a></li>
+                <li><a href="#" name="htmlcss">Htmlcss</a></li>
+                <li><a href="#" name="media">Media</a></li>
+                <li><a href="#" name="forms">Forms</a></li>
+                <li><a href="#" name="pseudo">Pseudo</a></li>
+                <li><a href="#" name="responsiv">Responsive</a></li>
+                <li><a href="#" name="seo">Seo</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="box">
+        <h1>Welcome to the CSS3 Excersice</h1>
+        <p>Please, click one option of the menu to show differents CSS styles of every page</p>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(193, 229, 240);
+}
+
+hr{
+  background-blend-mode:lighten;
+}
+
+.holeLine {
+  grid-area: myArea;
+}
+#line1 {
+  grid-area: Area1;
+}
+#line2 {
+  grid-area: Area2;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: 'myArea myArea myArea myArea myArea myArea'
+                        'Area1 Area1 Area1 Area2 Area2 Area2';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
